@@ -33,6 +33,14 @@ body {
     color: black;
     background-color: transparent;
     text-align: center;
+
+    min-width:200px;
+    width: auto !important;
+    width:200px;
+
+    min-height: 200px;
+    height: auto !important;
+    height: 200px;
 }
 
 /*Paragraph's style*/
