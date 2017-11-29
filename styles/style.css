@@ -34,13 +34,13 @@ body {
     background-color: transparent;
     text-align: center;
 
-    min-width:200px;
+    min-width:2000px;
     width: auto !important;
-    width:200px;
+    width:2000px;
 
-    min-height: 200px;
+    min-height: 2000px;
     height: auto !important;
-    height: 200px;
+    height: 2000px;
 }
 
 /*Paragraph's style*/
