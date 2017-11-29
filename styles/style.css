@@ -69,7 +69,7 @@ footer{
 
 
 #chat {
-    position: fixed;
+    position: right;
     right: 25px;
     bottom: 25px;
     width: 300px;
