@@ -70,37 +70,37 @@ footer{
 
 #chat {
     position: fixed;
-    right: 25px;
-    bottom: 25px;
-    width: 300px;
-    height: 400px;
+    right: 35px;
+    bottom: 35px;
+    width: 400px;
+    height: 500px;
 }
 
 #chatblue {
     position: fixed;
-    right: 25px;
-    bottom: 25px;
-    width: 300px;
-    height: 400px;
+    right: 35px;
+    bottom: 35px;
+    width: 400px;
+    height: 500px;
 }
 
-#chat-button {
-    width: 100px;
+#plutusButton {
+    width: 200px;
     position: absolute;
-    bottom: 0px;
-    right: 0px;
-}
-
-#chat-frame {
-    height: 400px;
-    width: 300px;
-}
-
-#chat-frame img {
-    width: 30px;
-    position: absolute;
+    bottom: 10px;
     right: 10px;
-    top: 10px;
+}
+
+#bot {
+    height: 500px;
+    width: 400px;
+}
+
+#bot img {
+    width: 40px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
 }
 
 iframe {
@@ -122,9 +122,15 @@ iframe {
 
     #mainTitle{
         text-align: center;
-        font-size: 150%;
+        font-size: 200%;
         text-decoration: underline;
     }
-    
 
+    footer{
+        position:relative;
+        text-align: center;
+        width:50%;
+        height:1.5em;
+        font-size: 0.5em;
+    }
 }

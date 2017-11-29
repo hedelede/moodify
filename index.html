@@ -35,15 +35,15 @@
 
     <script type="text/javascript">
         function openChat() {
-            var frame = document.getElementById("chat-frame");
+            var frame = document.getElementById("bot");
             frame.className = "";
-            var img = document.getElementById("chat-button");
+            var img = document.getElementById("plutusButton");
             img.className = "hide";
         }
         function closeChat() {
-            var frame = document.getElementById("chat-frame");
+            var frame = document.getElementById("bot");
             frame.className = "hide";
-            var img = document.getElementById("chat-button");
+            var img = document.getElementById("plutusButton");
             img.className = "";
         }
     </script>
@@ -82,8 +82,8 @@
 
     <!--   Implementation of the welcoming message in page   -->
     <div id="chat">
-        <img id="chat-button" src="styles/logo2.png" onclick="openChat()" />
-        <div id="chat-frame" class="hide">
+        <img id="plutusButton" src="styles/logo2.png" onclick="openChat()" />
+        <div id="bot" class="hide">
                 <iframe src='https://webchat.botframework.com/embed/leContosoBankBot2017?s=qbTXOJn7m6k.cwA.GKc.7jGeR9G-oKjCTovgjGoipOvVuoGiSCy0xD7gaN3krkY'></iframe>
 			<img src="styles/minus.png" onclick="closeChat()" />
         </div>
