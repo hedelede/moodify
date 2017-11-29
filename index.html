@@ -32,17 +32,32 @@
     <meta name="viewport" content="width=500, initial-scale=1">
 
     <script src="plotly-latest.min.js"></script>
+
+    <script type="text/javascript">
+        function openChat() {
+            var frame = document.getElementById("chat-frame");
+            frame.className = "";
+            var img = document.getElementById("chat-button");
+            img.className = "hide";
+        }
+        function closeChat() {
+            var frame = document.getElementById("chat-frame");
+            frame.className = "hide";
+            var img = document.getElementById("chat-button");
+            img.className = "";
+        }
+    </script>
 </head>
 
 <body>
     <!--   Main title displayed in page   -->
-    <h1 id="mainTitle">Welcome to Smart Power</h1>
+    <h1 id="mainTitle">Welcome to Contoso Bank</h1>
     <br>
     <!--   Implementation of buttons in page   -->
     <div class="btn-group">
-        <button type="button" class="btn btn-primary btn-lg" id="currentBtn">Current</button>
-        <button type="button" class="btn btn-primary btn-lg" id="voltageBtn">Voltage</button>
-        <button type="button" class="btn btn-primary btn-lg" id="powerBtn">Power</button>
+        <button type="button" class="btn btn-primary btn-lg" id="currentBtn">Account</button>
+        <button type="button" class="btn btn-primary btn-lg" id="voltageBtn">Loans</button>
+        <button type="button" class="btn btn-primary btn-lg" id="powerBtn">About</button>
     </div>
 
     <!--   Implementation of current graph in page   -->
@@ -64,9 +79,15 @@
     </div>
 
     <!--   Implementation of the welcoming mesage in page   -->
-     <div class="container-fluid" id="welcomeMessage" style="display:block;">
-        <button type="button" class="btn btn-primary btn-lg" id="chatbutton">Plutus</button>
+    <div id="chat">
+        <button type="button" class="btn btn-primary btn-lg" id="chat-button" onclick="openChat()">Plutus</button>
+        <div id="chat-frame" class="hide">
+                <iframe src='https://webchat.botframework.com/embed/leContosoBankBot2017?s=qbTXOJn7m6k.cwA.GKc.7jGeR9G-oKjCTovgjGoipOvVuoGiSCy0xD7gaN3krkY'></iframe>
+			<img src="styles/minus.png" onclick="closeChat()" />
+        </div>
     </div>
+    
+    <br></br><br></br>
 
     <div class="container-fluid" id="chat" style="display:none;">
         <br>
