@@ -33,14 +33,6 @@ body {
     color: black;
     background-color: transparent;
     text-align: center;
-
-    min-width:2000px;
-    width: auto !important;
-    width:2000px;
-
-    min-height: 2000px;
-    height: auto !important;
-    height: 2000px;
 }
 
 /*Paragraph's style*/
@@ -119,4 +111,26 @@ iframe {
 
 .hide {
     display: none;
+}
+
+@media only screen and (max-width: 960px) {
+    body {
+        color: black;
+        background-color: transparent;
+        text-align: center;
+    }
+
+    #mainTitle{
+        text-align: center;
+        font-size: 150%;
+        text-decoration: underline;
+    }
+
+    .container-fluid{
+        background-color: transparent;
+        font-size: 1.75em;
+        margin: 0 auto;
+        text-align: center;
+        size: 50%;
+    }
 }
