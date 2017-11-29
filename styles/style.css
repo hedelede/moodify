@@ -1,0 +1,67 @@
+/*
+
+    Smart Power
+
+    Copyright (C) 2016 Sylvain Bechet <sbec582@aucklanduni.ac.nz>
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    any later version.
+        
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+        
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+*/
+
+/*Basic page's style*/
+html {
+  background: url("pic3.jpg") no-repeat no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/*Body's style*/
+body {
+    color: black;
+    background-color: transparent;
+    text-align: center;
+}
+
+/*Paragraph's style*/
+p {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+/*Main title's style*/
+#mainTitle{
+    text-align: center;
+    font-size: 300%;
+    text-decoration: underline;
+}
+
+/*Bootstrap's containers' styles*/
+.container-fluid{
+    background-color: transparent;
+    font-size: 1.75em;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/*Footer's style*/
+footer{
+    position:relative;
+    text-align: center;
+    width:100%;
+    height:3.5em;
+    font-size: 1.125em;
+}

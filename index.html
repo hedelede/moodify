@@ -1,42 +1,92 @@
+<!--
+
+    Smart Power
+
+    Copyright (C) 2016 Sylvain Bechet <sbec582@aucklanduni.ac.nz>
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    any later version.
+        
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+        
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+ -->
+
+
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Moodify</title>
-        <script type="text/javascript">  var appInsights=window.appInsights||function(config){    function r(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s=u.createElement(o),i,f;s.src=config.url||"//az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(s);try{t.cookie=u.cookie}catch(h){}for(t.queue=[],i=["Event","Exception","Metric","PageView","Trace","Dependency"];i.length;)r("track"+i.pop());return r("setAuthenticatedUserContext"),r("clearAuthenticatedUserContext"),config.disableExceptionTracking||(i="onerror",r("_"+i),f=e[i],e[i]=function(config,r,u,e,o){var s=f&&f(config,r,u,e,o);return s!==!0&&t["_"+i](config,r,u,e,o),s}),t    }({        instrumentationKey:"8adcc72f-de19-4a1e-a997-298451bb303c"    });           window.appInsights=appInsights;    appInsights.trackPageView();</script>
-    </head>
-    <body>
-        <div class="container" id="page-container">
-            <h1 id="app-name">
-                <span class="glyphicon glyphicon-headphones"></span> moodify
-            </h1>
-            <!-- NB: glyphicon halflings are generally not free, but the developer made them free in bootstrap -->
+<html lang="en">
 
-            <h2 id="page-header">
-                Get song recommendations based on your mood.
-            </h2>
-            <img id="selected-img" style="margin:0 auto"></img>
-            <h4 id="track-name"></h4>
-            <div class="btn-wrapper">
-                <label class="btn btn-info" for="my-file-selector">
-                    <input id="my-file-selector" type="file">
-                    Upload a picture of you
-                </label>
-                <button type="button" class="btn btn-info" id="refreshbtn">Another song please</button>
-            </div>
-            <div id="musicplayer"></div>
-        </div>
-        <!-- 
-            NB: You generally do not want to publically expose the server structure (eg. ./node_modules/...)
-            will sort that in later bootcamps with task-runners and the like.
-            For now this is just a demonstration.
+<head>
+    <!--   Preliminary setup of page (inclusion of styles, adaptability of page on different pages)   -->
+    <title>Smart Power</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=500, initial-scale=1">
 
-            Alternatively can use CDNs for bootstrap/jquery
-        -->
-        <link rel="stylesheet" type="text/css" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="./css/style.css">
-        <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script src="./node_modules/jquery/dist/jquery.min.js"></script>
-        <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
-        <script src="./js/main.js"></script>
-    </body>
+    <script src="plotly-latest.min.js"></script>
+</head>
+
+<body>
+    <!--   Main title displayed in page   -->
+    <h1 id="mainTitle">Welcome to Smart Power</h1>
+    <br>
+    <!--   Implementation of buttons in page   -->
+    <div class="btn-group">
+        <button type="button" class="btn btn-primary btn-lg" id="currentBtn">Current</button>
+        <button type="button" class="btn btn-primary btn-lg" id="voltageBtn">Voltage</button>
+        <button type="button" class="btn btn-primary btn-lg" id="powerBtn">Power</button>
+    </div>
+
+    <!--   Implementation of current graph in page   -->
+    <div class="container-fluid" id="IGraph" style="display:none;">
+        <br>
+        <div id="currentGraph" style="width: 100%; height: 600%;"></div>
+    </div>
+
+    <!--   Implementation of voltage graph in page   -->
+    <div class="container-fluid" id="VGraph" style="display:none;">
+        <br>
+        <div id="voltageGraph" style="width: 100%; height: 600%;"></div>   
+    </div>
+
+    <!--   Implementation of power graph in page   -->
+    <div class="container-fluid" id="PGraph" style="display:none;">
+        <br>
+        <div id="powerGraph" style="width: 100%; height: 600%;"></div>
+    </div>
+
+    <!--   Implementation of the welcoming mesage in page   -->
+     <div class="container-fluid" id="welcomeMessage" style="display:block;">
+        <br></br>
+        <p>
+            To get started and view graphs of current, voltage or power data, click on one of the buttons above. 
+            The data on each graph is retrieved directly from our wireless power monitor, allowing you to view the data collected in an easy to understand manner. 
+        </p>
+        <br></br>
+    </div>
+
+    <!--   Scripts used in page   -->
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="scripts/main.js"></script>
+
+    <!--   Footnote at bottom of page   -->
+    <footer>
+        <br></br>
+        <p>Website created by Sylvain Bechet. <br> All pictures belong to their rightful owners.
+        </p>
+    </footer>
+
+</body>
+
+
+
 </html>
