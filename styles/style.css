@@ -121,15 +121,8 @@ iframe {
     }
 
     #mainTitle{
-        text-align: left;
+        text-align: center;
         font-size: 200%;
         text-decoration: underline;
-    }
-
-    .container-fluid{
-        background-color: transparent;
-        font-size: 1.75em;
-        margin: 0 auto;
-        text-align: left;
     }
 }
